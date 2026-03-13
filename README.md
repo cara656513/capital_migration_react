@@ -2,7 +2,7 @@
 - React
 - css module + scss
 
-## 커밋 타입
+# 커밋 타입
 
 | 타입 | 설명 | 예시 |
 |---|:---:|:---|
@@ -13,3 +13,29 @@
 | refactor | 리팩토링 | refactor: simplify auth logic|
 | test | 테스트 코드 작성/수정 | test: add unit tests for login component |
 | chore | 빌드/설정 변경 | chore: update node dependencies |
+
+# Coding Convention
+## 컴포넌트
+```
+컴포넌트는 function으로 정의하며, export default 함수명으로 내보낸다.
+
+// Good
+function App() {
+  return (
+    <div>
+      App
+    </div>
+  );
+}
+
+export default App;
+
+// Bad
+export default function App() {
+  return (
+    <div>
+      App
+    </div>
+  );
+}
+```
