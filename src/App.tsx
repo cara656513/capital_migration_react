@@ -1,4 +1,5 @@
 import Guide from './pages/Guide';
+import "./styles/global.scss";
 
 function App() {
   return (
