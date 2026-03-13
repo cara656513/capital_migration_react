@@ -1,5 +1,4 @@
 import Guide from './pages/Guide';
-import './App.css';
 
 function App() {
   return (
