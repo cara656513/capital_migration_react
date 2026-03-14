@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/breakpoints" as *;
 
 .button {
     border-radius: 6px;
@@ -23,6 +24,10 @@
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+    }
+
+    @include mobile {
+        padding: 8px 16px;
     }
 }
 
