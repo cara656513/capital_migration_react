@@ -1,0 +1,13 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/breakpoints" as *;
+
+.container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+
+    @include mobile {
+        gap: 20px;
+    }
+}
