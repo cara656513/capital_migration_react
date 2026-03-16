@@ -2,23 +2,30 @@ import classNames from "classnames";
 import styles from "./Button.module.scss";
 
 type ButtonVariant = "primary" | "secondary";
+type As = "button" | "a";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
+    as?: As;
+    href?: string
 }
 
-export default function Button({
+function Button({
     variant = "primary",
+    as = "button",
+    href,
     children,
-    className,
-    ...props
+    className
 }: ButtonProps) {
+    const Component = as
     return (
-        <button
+        <Component
+            href={href}
             className={classNames(styles.button, styles[variant], className)}
-            {...props}
         >
             {children}
-        </button>
+        </Component>
     );
 }
+
+export default Button;

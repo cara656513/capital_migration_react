@@ -28,6 +28,9 @@ function Guide() {
               <div className={styles.guideSectionPreview}>
                 <Button variant="secondary">취소</Button>
                 <Button>확인</Button>
+                <Button as="a" href="#">
+                  링크버튼
+                </Button>
               </div>
             </>}
         </section>

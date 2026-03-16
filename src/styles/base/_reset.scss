@@ -140,4 +140,14 @@ button {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    color: inherit;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    // color: inherit;
 }

@@ -20,6 +20,8 @@
 
     .guideSectionTitle {
       width: 100%;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
       margin-bottom: 1rem;
       font-size: 1.5rem;
       font-weight: 600;
@@ -39,8 +41,6 @@
     }
 
     .guideSectionPreview {
-      display: flex;
-      gap: 10px;
       padding: 1rem;
       border: 1px solid #333;
       border-radius: 8px;
