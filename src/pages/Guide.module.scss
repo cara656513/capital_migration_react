@@ -1,0 +1,50 @@
+.guideContainer {
+  padding: 2rem;
+
+  .guideTitle {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .guideContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .guideSection {
+    width: 100%;
+
+    .guideSectionTitle {
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .guideSectionDesc {
+      margin: 1rem 0 1rem;
+      color: #666;
+      line-height: 1.5;
+
+      code {
+        background-color: #f0f0f0;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+    }
+
+    .guideSectionPreview {
+      display: flex;
+      gap: 10px;
+      padding: 1rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+  }
+}
