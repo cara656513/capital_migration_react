@@ -23,14 +23,23 @@ function Guide() {
           {isOpen &&
             <>
               <div className={styles.guideSectionDesc}>
-                <p>경로: <code>components/common/Button.tsx</code></p>
+                <p>경로: <code>components/Button/Button.tsx</code></p>
                 <p>Button은 button, a 태그에서 공통으로 사용 가능합니다.</p>
               </div>
               <div className={styles.guideSectionPreview}>
+                <p style={{ marginBottom: '10px', fontSize: '1.4rem', color: '#666' }}>[Default Theme]</p>
                 <ButtonGroup>
                   <Button variant="secondary">취소</Button>
                   <Button>확인</Button>
                 </ButtonGroup>
+
+                <p style={{ margin: '20px 0 10px', fontSize: '1.4rem', color: '#666' }}>[Popup Theme]</p>
+                <ButtonGroup>
+                  <Button theme="popup" variant="secondary">취소</Button>
+                  <Button theme="popup">확인</Button>
+                </ButtonGroup>
+
+                <p style={{ margin: '20px 0 10px', fontSize: '1.4rem', color: '#666' }}>[Link Button]</p>
                 <Button as="a" href="#">
                   링크버튼
                 </Button>

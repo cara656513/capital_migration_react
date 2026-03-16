@@ -6,12 +6,14 @@ type As = "button" | "a";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
+    theme?: "default" | "popup";
     as?: As;
     href?: string
 }
 
 function Button({
     variant = "primary",
+    theme = "default",
     as = "button",
     href,
     children,
@@ -21,7 +23,12 @@ function Button({
     return (
         <Component
             href={href}
-            className={classNames(styles.button, styles[variant], className)}
+            className={classNames(
+                styles.button,
+                styles[variant],
+                theme !== "default" && styles[theme],
+                className
+            )}
         >
             {children}
         </Component>
