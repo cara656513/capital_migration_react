@@ -1,12 +1,13 @@
 import classNames from "classnames";
 import styles from "./Button.module.scss";
+import IconDownload from "../../assets/icons/download.svg";
 
 type ButtonVariant = "primary" | "secondary";
 type As = "button" | "a";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
-    theme?: "default" | "popup";
+    theme?: "default" | "popup" | "form" | "download";
     as?: As;
     href?: string
 }
@@ -31,6 +32,7 @@ function Button({
             )}
         >
             {children}
+            {theme === "download" && <img src={IconDownload} alt="다운로드" />}
         </Component>
     );
 }

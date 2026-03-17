@@ -24,27 +24,38 @@ function Guide() {
             <>
               <div className={styles.guideSectionDesc}>
                 <p>경로: <code>components/Button/Button.tsx</code></p>
-                <p>Button은 button, a 태그에서 공통으로 사용 가능합니다.</p>
               </div>
+
               <div className={styles.guideSectionPreview}>
-                <p style={{ marginBottom: '10px', fontSize: '1.4rem', color: '#666' }}>[Default Theme]</p>
+                <p className={styles.title}>[Default Theme]</p>
                 <ButtonGroup>
                   <Button variant="secondary">취소</Button>
                   <Button>확인</Button>
                 </ButtonGroup>
 
-                <p style={{ margin: '20px 0 10px', fontSize: '1.4rem', color: '#666' }}>[Popup Theme]</p>
-                <ButtonGroup>
-                  <Button theme="popup" variant="secondary">취소</Button>
-                  <Button theme="popup">확인</Button>
-                </ButtonGroup>
-
-                <p style={{ margin: '20px 0 10px', fontSize: '1.4rem', color: '#666' }}>[Link Button]</p>
+                <p className={styles.title}>[Link Button]</p>
                 <ButtonGroup>
                   <Button as="a" href="#">
                     링크버튼
                   </Button>
                 </ButtonGroup>
+
+                <p className={styles.title}>[Popup Theme]</p>
+                <ButtonGroup>
+                  <Button theme="popup" variant="secondary">취소</Button>
+                  <Button theme="popup">확인</Button>
+                </ButtonGroup>
+
+                <p className={styles.title}>[Form Theme]</p>
+                <ButtonGroup>
+                  <Button theme="form">버튼명</Button>
+                </ButtonGroup>
+
+                <p className={styles.title}>[Download Theme]</p>
+                <ButtonGroup>
+                  <Button theme="download">첨부파일명</Button>
+                </ButtonGroup>
+
               </div>
             </>}
         </section>
