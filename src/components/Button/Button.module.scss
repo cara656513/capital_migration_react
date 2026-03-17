@@ -1,6 +1,10 @@
 @use "../../styles/abstracts/variables" as *;
 @use "../../styles/abstracts/breakpoints" as *;
 
+a.button {
+    display: inline-block;
+}
+
 .button {
     padding: 15px 60px;
     border-radius: 100px;
@@ -18,7 +22,8 @@
 
     @include mobile {
         width: 100%;
-        font-size: 1.8rem;
+        padding: 15px 10px;
+        font-size: 2rem;
     }
 }
 
@@ -26,7 +31,7 @@
     background: $color-primary;
     color: $color-white;
 
-    &:hover {
+    &:hover:not(:disabled) {
         background: $color-primary-hover;
     }
 }
@@ -35,32 +40,35 @@
     background: $color-d;
     color: $color-45;
 
-    &:hover {
+    &:hover:not(:disabled) {
         background: $color-c;
     }
 }
 
 // Popup Theme Styles
 .popup {
-    &.primary {
-        background: $color-primary;
-        color: $color-white;
-        border: 1px solid $color-primary;
+    font-size: 2rem;
 
-        &:hover {
-            background: $color-primary-hover;
-            border-color: $color-primary-hover;
+    &.primary {
+        background: $color-2;
+
+        &:hover:not(:disabled) {
+            background: $color-primary;
         }
     }
 
     &.secondary {
-        background: transparent;
+        background: $color-white;
         color: $color-45;
         border: 1px solid $color-c;
 
-        &:hover {
-            background: $color-d;
-            border-color: $color-c;
+        &:hover:not(:disabled) {
+            background: $color-c;
+            border-color: $color-white;
         }
+    }
+
+    @include mobile {
+        font-size: 1.8rem;
     }
 }

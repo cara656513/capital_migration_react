@@ -4,7 +4,7 @@ import styles from "./Guide.module.scss";
 import ButtonGroup from "../components/ButtonGroup/ButtonGroup";
 
 function Guide() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   }
@@ -40,9 +40,11 @@ function Guide() {
                 </ButtonGroup>
 
                 <p style={{ margin: '20px 0 10px', fontSize: '1.4rem', color: '#666' }}>[Link Button]</p>
-                <Button as="a" href="#">
-                  링크버튼
-                </Button>
+                <ButtonGroup>
+                  <Button as="a" href="#">
+                    링크버튼
+                  </Button>
+                </ButtonGroup>
               </div>
             </>}
         </section>
