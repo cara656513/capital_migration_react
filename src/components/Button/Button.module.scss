@@ -95,10 +95,11 @@ a.button {
 }
 
 .download {
-    padding: 16px 32px;
-
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
+
+    padding: 16px 32px;
     gap: 10px;
 
     color: $color-45;
@@ -121,8 +122,33 @@ a.button {
         }
     }
 
+    .icon {
+        display: flex;
+    }
+
     @include mobile {
-        padding: 12px 10px;
+        grid-template-columns: auto 1fr;
+        padding: 0; // 패딩 제거하고 구조로 해결
+
         font-size: 1.6rem;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            background: $color-primary;
+            height: 100%;
+            padding: 0 16px 0 20px;
+            border-radius: 100px 0 0 100px;
+
+            svg {
+                color: $color-white;
+            }
+        }
+
+        &:hover:not(:disabled) {
+            svg {
+                color: $color-white;
+            }
+        }
     }
 }

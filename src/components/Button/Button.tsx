@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import styles from "./Button.module.scss";
 import IconDownload from "../../assets/icons/download.svg?react";
+import Icon from "../Icon/Icon";
 
 type ButtonVariant = "primary" | "secondary";
 type As = "button" | "a";
@@ -32,7 +33,7 @@ function Button({
             )}
         >
             {children}
-            {theme === "download" && <IconDownload />}
+            {theme === "download" && <Icon className={styles.icon}><IconDownload /></Icon>}
         </Component>
     );
 }
