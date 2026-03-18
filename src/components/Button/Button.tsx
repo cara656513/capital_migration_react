@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./Button.module.scss";
-import IconDownload from "../../assets/icons/download.svg";
+import IconDownload from "../../assets/icons/download.svg?react";
 
 type ButtonVariant = "primary" | "secondary";
 type As = "button" | "a";
@@ -32,7 +32,7 @@ function Button({
             )}
         >
             {children}
-            {theme === "download" && <img src={IconDownload} alt="다운로드" />}
+            {theme === "download" && <IconDownload />}
         </Component>
     );
 }

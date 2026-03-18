@@ -107,10 +107,18 @@ a.button {
     background: $color-white;
     border: 1.5px solid $color-d;
 
+    svg {
+        color: $color-9;
+    }
+
     &:hover:not(:disabled) {
         background: $color-white;
         color: $color-primary;
         border-color: $color-primary;
+
+        svg {
+            color: $color-primary;
+        }
     }
 
     @include mobile {
